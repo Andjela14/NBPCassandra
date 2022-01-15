@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Add Advertisement</title>
+    <link rel="icon" href="assets/img/icon3.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/Footer-Dark.css">
+    <link rel="stylesheet" href="assets/css/Header-Blue.css">
+    <link rel="stylesheet" href="assets/css/Search-Input-Responsive-with-Icon.css">
+    <link rel="stylesheet" href="assets/css/oglas-styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-light navbar-expand-md" id="nav-bar">
+        <div class="container-fluid"><a class="navbar-brand"  style="background: url(&quot;assets/img/Oglasi%20se.png&quot;) center / cover no-repeat;width: 150px;height: 50px;"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav" style="margin-left: auto;">
+                    <li class="nav-item"><a class="nav-link text-white" href = "index.html"><i class="fa fa-home" id="user-icon"></i> Pocetna</a></li>
+                    <li class="nav-item"><a class="nav-link redirekcija text-white" href="profile.html"><i class="fa fa-user"></i> Moj Profil</a></li>
+                    <li class="nav-item" onclick = "logoutUser()"><a class="nav-link" id="uloguj-se" href = ""><i class="fa fa-sign-out" id="user-icon"></i> Izloguj se</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="oglas-banner" class="mt-2 mb-3 p-4 bg-custom-2" style="margin-top: 30px!important;">
+        <div class="container border b-radius p-3 bg-white">
+            <div class="row" >
+                <div class="col-4 text-end"><button id="novi-oglas-dugme" class="btn btn-success doda"><span>Dodaj oglas &nbsp;<i class="fa fa-plus"></i></span></button></div>
+            </div>
+            <hr>
+            <div class="col-12 d-flex justify-content-center">                    
+                <div style="margin:auto">
+                    <span class = "align-middle"><img src="assets/img/sacuvani.png" class="img-fluid" alt="Responsive image"></span>
+                </div>
+            </div>
+        </div>   
+    </section>   
+    <div class="container border b-radius p-3 bg-light" id="forma-novi-oglas">
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6  column col-sm-offset-0 col-md-offset-2 col-lg-offset-3">
+                <form class="form-horizontal">
+                    <fieldset>
+                        <legend>Novi oglas</legend>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="selectbasic">Tip oglasa:</label>
+                            <div class="col-md-6">
+                                <select id="selectbasic" name="selectbasic" class="form-control">
+                                    <option value="Nekretnine">Nekretnine</option>
+                                    <option value="Vozila i delovi">Vozila i delovi</option>
+                                    <option value="Posao">Posao</option>
+                                    <option value="Antikviteti i kolekcionarstvo">Antikviteti i kolekcionarstvo</option>
+                                    <option value="Audio, TV, foto">Audio, TV, foto</option>
+                                    <option value="Gradjevinarstvo">Gradjevinarstvo</option>
+                                    <option value="Knjige">Knjige</option>
+                                    <option value="Kucni aparati">Kucni aparati</option>
+                                    <option value="Kucni ljubimci">Kucni ljubimci</option>
+                                    <option value="Masine, alati, oprema">Masine, alati, oprema</option>
+                                    <option value="Muzika i instrument">Muzika i instrumenti</option>
+                                    <option value="Namestaj i Pokucstvi">Namestaj i Pokucstvi</option>
+                                    <option value="Nega lica i tela">Nega lica i tela</option>
+                                    <option value="Odeca, obuca, dodaci">Odeca, obuca, dodaci</option>
+                                    <option value="Racunari">Racunari</option>
+                                    <option value="Sport">Sport</option>
+                                    <option value="Telefoni">Telefoni</option>
+                                    <option value="Usluge">Usluge</option>
+                                    <option value="Zdravstvo">Zdravstvo</option>
+                                    <option value="Drugo">Drugo...</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-12 control-label" for="textinput">Naslov Oglasa:</label>
+                            <div class="col-md-12">
+                                <input id="textinputTitle" name="textinput" type="text" placeholder="Naziv"
+                                    class="form-control input-md">
+                            </div>
+                            <label class="col-md-12 control-label" for="textinput">Broj telefona:</label>
+                            <div class="col-md-12">
+                                <input id="textinputTel" name="textinput" type="text" placeholder="Telefon"
+                                    class="form-control input-md">
+                            </div>
+                            <label class="col-md-12 control-label" for="textinput">Lokacija:</label>
+                            <div class="col-md-12">
+                                <input id="textinputGrad" name="textinput" type="text" placeholder="Grad, Drzava, Mesto..."
+                                    class="form-control input-md">
+                            </div>                              
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-12 control-label" for="textarea">Opis:</label>
+                            <div class="col-md-12">
+                                <textarea class="form-control" id="textarea" name="textarea"
+                                    placeholder="Opis"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="button1id"></label>
+                            <div class="col-md-8">
+                                <button id="button1id" name="button1id" class="btn btn-success m-2"><i
+                                        class="fa fa-check"></i></button>
+                                <button id="button2id" name="button2id" class="btn btn-danger m-2"><i
+                                        class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="load-oglas" class="alert container text-center alert-success notranslate" role="alert">
+        <div class="spinner-grow" role="status"></div> <span class="h5 ogpos"> Oglas se postavlja... </span>
+    </div>
+    <div id="confirm-oglas" class="alert container text-center alert-success notranslate" role="alert">
+        <i class="fa fa-check"></i> <span class="h5 ogpos1"> Oglas uspesno postavljen! </span>
+    </div>
+    <div class="container list-wrapper" id="oglasi">
+        <ul id="liked-adds" class="col-12 row d-flex justify-content-center">             
+            
+
+        </ul>
+    </div>
+    <footer class="footer-dark d-flex justify-content-center p-1">
+        <div class="">
+            <div class=" d-flex justify-content-center">
+                <div style=""><a href="#"><i> <img src="assets/img/icon3.png"></div>
+            </div>
+            <div class="copyright">Oglasi Se © 2021</div>
+            
+        </div>
+    </footer>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/function_for_pages/advertisementjsfile.js"></script>
+    <script src="assets/function_for_pages/fetch_liked.js"></script>
+    <script src="assets/scripts/new-form.js"></script>
+    <script src="assets/general.js"></script>
+    
+</body>
+</html>

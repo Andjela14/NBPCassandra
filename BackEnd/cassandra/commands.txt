@@ -1,0 +1,70 @@
+CREATE TABLE "User" (
+    username text
+    first_name text
+    lats_name text
+    email text
+    password text,
+    PRIMARY KEY (username)  
+);
+  
+INSERT INTO "User" (username, first_name, lats_name, email, password, adds) VALUES ('Dule123', 'Dusan', 'Dimitrov','dusandim@gmail.com', 'duledule1' ['Prodajem kucu', 'Plac na prodaju']);
+
+INSERT INTO "User" (username, first_name, lats_name, email, password, adds) VALUES ('Peki', 'Petra', 'Petrovic', 'perap@gmail.com', 'pekipeki12',['Trazim dadilju']);
+
+SELECT * FROM "User";
+
+CREATE TABLE "LatestAdds" (
+    username text,
+    add_title text,
+    added_date timestamp,
+    description text,
+    location text,
+    phonenumber text,
+    category text,
+    PRIMARY KEY ( add_title, added_date)
+    )
+    WITH CLUSTERING ORDER BY (added_date ASC);
+
+    CREATE TABLE "Adds_by_category" (
+        username text, 
+        add_title text,
+        added_date timestamp,
+        description text,
+        location text,
+        phonenumber text,
+        category text,
+        PRIMARY KEY (category, add_title)  
+        )
+        WITH CLUSTERING ORDER BY (add_title DESC);
+
+    CREATE TABLE "UsersAdds" (
+        username text, 
+        add_title text,
+        added_date timestamp,
+        description text,
+        location text,
+        phonenumber text,
+        category text,
+        PRIMARY KEY (username, add_title)  
+        )
+        WITH CLUSTERING ORDER BY (add_title DESC);;
+
+        CREATE TABLE "LikedAdds" (
+            username text,
+            add_title text,
+            added_date text,
+            PRIMARY KEY (username, add_title, added_date)  
+            );
+        
+        CREATE TABLE "Review" (
+            username text,
+            add_title text,
+            description text,
+            rate int,
+            added_date timestamp,
+            PRIMARY KEY (add_title)  
+            );
+
+INSERT INTO "Advertisement" (username, add_title, added_date, description, location, phonenumber, categorties, rates) VALUES ('Peki', 'Trazim dadilju', toTimeStamp(toDateTime(now())), 'Potrebna dadilja za dete od 3 godine, radnim danima od 10h do 16h.', 'Nis', '0643456789', ['Posao'], [1,4,5,3]);
+
+

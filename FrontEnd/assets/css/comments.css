@@ -1,0 +1,41 @@
+.animated {
+    -webkit-transition: height 0.2s;
+    -moz-transition: height 0.2s;
+    transition: height 0.2s;
+}
+
+.stars
+{
+    font-size: 24px;
+    color: #d17581;
+}
+
+.review-block{
+	background-color:#ccf5ff;
+	border:1px solid blue;
+	border-radius: 4px;
+}
+.review-block-name{
+	font-size:12px;
+}
+.review-block-date{
+	font-size:12px;
+}
+.review-block-rate{
+	font-size:13px;
+}
+.review-block-title{
+	font-size:15px;
+	font-weight:700;
+}
+.review-block-description{
+	font-size:13px;
+}
+
+.btnGreen{
+	background-color: green;
+}
+
+.review-div{
+	border:1px solid blue;
+}

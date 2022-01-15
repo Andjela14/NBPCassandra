@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Moj Profil</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/Footer-Dark.css">
+</head>
+
+<body id="page-top"  >
+
+    <nav class="navbar navbar-dark navbar-expand-md " id="nav-bar">
+        <div class="container-fluid"><a class="navbar-brand"  style="background: url(&quot;assets/img/Oglasi%20se.png&quot;) center / cover no-repeat;width: 150px;height: 50px;"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav text-primary" style="margin-left: auto;">
+                    <li class="nav-item"><a class="nav-link text-primary" href = "index.html"><i class="fa fa-home" id="user-icon"></i> Pocetna</a></li>
+                    <li class="nav-item" id = "predajOglas"><a class="nav-link active text-primary" id="predaj-oglas" href="advertisments.html"><i class="fa fa-plus-square" id="plus-icon" ></i>Predaj Oglas</a></li>
+                    <li class="nav-item" onclick = "logoutUser()"><a class="nav-link text-primary" id="uloguj-se" href = ""><i class="fa fa-sign-out" id="user-icon"></i> Izloguj se</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="wrapper" >
+        <div class="d-flex flex-column bg-info" id="content-wrapper">
+            <div id="content" class="p-3">
+                <section>
+                    <div class="row mb-3">
+                        <div class="col-lg-4">
+                            <div class="card mb-3" style="background: rgba(255,255,255,0.85);">
+                                <div class="card-body text-center shadow"><img id="my-avatar"
+                                        class="rounded-circle mb-3 mt-4" src="assets/img/userimg.png" width="160"
+                                        height="160">
+                                    <div class="mb-3">
+                                        <div class="col">
+                                            <div class="mb-3"><label class="form-label" for="username"><strong id="username">@username</strong></label></div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="mb-3"><label class="form-label" 
+                                                    for="email"><strong id="email">user@example.com</strong></label></div>
+                                        </div>
+                                        
+                                        <div class="col">
+                                            <div class="mb-3"><button id="izmeni-profil-btn"
+                                                    class="btn btn-primary btn-sm" type="submit">Izmeni profil &nbsp;<i
+                                                        class="fas fa-plus"></i></button></div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="mb-3"><button id="promeni-sifru-btn"
+                                                    class="btn btn-primary btn-sm" type="submit">Promeni sifru &nbsp;<i
+                                                        class="fas fa-plus"></i></button></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body" id="izmeni-profil">
+                                    <form id="">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3" id="ime-label"><label class="form-label" 
+                                                        for="first_name"><strong>Ime</strong><br></label><input
+                                                        class="form-control" type="text" id="first_name"
+                                                        placeholder="..." name="first_name"></div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="mb-3" id="prezime-label"><label class="form-label" 
+                                                        for="last_name"><strong>Prezime</strong><br></label><input
+                                                        class="form-control" type="text" id="last_name"
+                                                        placeholder="..." name="last_name"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <button class="btn btn-primary btn-sm btn-success"  id= "potvrdiPromenuIP"> OK <i class="fas fa-check"></i></button>
+                                                <button id="cancel-izmeni-profil"
+                                                    class="btn btn-danger btn-sm btn-danger" type="submit"> <i
+                                                        class="fas fa-times"></i></button>
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                </div>
+                                <div class="card-body" id="promeni-sifru">
+                                    <!-- <form id=""> -->
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3" id="label-stara-sifra"><label class="form-label" 
+                                                        for="pasword"><strong>Stara sifra</strong><br></label><input type="pasword" 
+                                                        class="form-control" type="text" id="oldpassword"
+                                                        placeholder="..." name="oldpassword" readonly ></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3" id="label-nova-sifra"><label class="form-label"
+                                                        for="first_name"><strong>Nova sifra</strong><br></label><input
+                                                        class="form-control" type="text" id="newPassword"
+                                                        placeholder="..." name="newPassword"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3" id="label-ponovi-sifru"><label class="form-label"
+                                                        for="first_name"><strong>Ponovi sifru</strong><br></label><input
+                                                        class="form-control" type="text" id="repeatPassword"
+                                                        placeholder="..." name="repeatPassword"></div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3"><button class="btn btn-primary btn-sm" id="potvrdiPromenuSifre">Promeni
+                                                sifru</button> <button id="cancel-promeni-sifru"
+                                                class="btn btn-danger btn-sm" id ="otkaziPromenuSifre" ><i
+                                                    class="fas fa-times"></i></button></div>
+                                    <!-- </form> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            
+
+                            <nav aria-label="">
+                                <ul class="pagination pagination-lg mb-0">
+                                    <li class="page-item">
+                                        <button id="moji-oglasi-btn" class="page-link btn btn-sm">MOJI OGLASI <i
+                                                class="fas fa-upload"></i></button>
+                                    </li>
+                                    <li class="page-item"><button id="sacuvani-objekti-btn"
+                                            class="page-link btn btn-sm">SACUVANO <i class="fas fa-heart"></i></button>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                            <div id="moji-oglasi" class="card shadow mb-4" style="background: rgba(255,255,255,0.85);">
+                                <div class="card-body">
+                                    <div id="novi-oglas-dugme" hidden="true"></div>
+                                    <section class="highlight-clean mt-2" style="background: rgba(255,255,255,0.85);">
+                                        
+                                        
+                                        <div class="container custom-background pt-3" id="sectionOglas">
+                                            <div class="container border b-radius p-3 bg-light mb-3" id="forma-novi-oglas" >
+                                                <div class="row">
+                                                    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6  column col-sm-offset-0 col-md-offset-2 col-lg-offset-3">
+                                                        <form class="form-horizontal" >
+                                                            <fieldset>
+                                                                <legend>Izmeni oglas</legend>
+                                                                <div class="form-group">
+                                                                    <label class="col-md-3 control-label" for="selectbasic">Tip oglasa:</label>
+                                                                    <div class="col-md-12">
+                                                                        <select id="selectbasic" name="selectbasic" class="form-control" readonly>
+                                                                            <option value="Nekretnine">Nekretnine</option>
+                                                                            <option value="Vozila i delovi">Vozila i delovi</option>
+                                                                            <option value="Posao">Posao</option>
+                                                                            <option value="Antikviteti i kolekcionarstvo">Antikviteti i kolekcionarstvo</option>
+                                                                            <option value="Audio, TV, foto">Audio, TV, foto</option>
+                                                                            <option value="Gradjevinarstvo">Gradjevinarstvo</option>
+                                                                            <option value="Knjige">Knjige</option>
+                                                                            <option value="Kucni aparati">Kucni aparati</option>
+                                                                            <option value="Kucni ljubimci">Kucni ljubimci</option>
+                                                                            <option value="Masine, alati, oprema">Masine, alati, oprema</option>
+                                                                            <option value="Muzika i instrument">Muzika i instrumenti</option>
+                                                                            <option value="Namestaj i Pokucstvi">Namestaj i Pokucstvi</option>
+                                                                            <option value="Nega lica i tela">Nega lica i tela</option>
+                                                                            <option value="Odeca, obuca, dodaci">Odeca, obuca, dodaci</option>
+                                                                            <option value="Racunari">Racunari</option>
+                                                                            <option value="Sport">Sport</option>
+                                                                            <option value="Telefoni">Telefoni</option>
+                                                                            <option value="Usluge">Usluge</option>
+                                                                            <option value="Zdravstvo">Zdravstvo</option>
+                                                                            <option value="Drugo">Drugo...</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="col-md-12 control-label" for="textinput">Naslov Oglasa:</label>
+                                                                    <div class="col-md-12">
+                                                                        <input id="textinputTitle" name="textinput" type="text" placeholder="Naziv" class="form-control input-md" readonly>
+                                                                    </div>
+                                                                    <label class="col-md-12 control-label" for="textinput">Broj telefona:</label>
+                                                                    <div class="col-md-12">
+                                                                        <input id="textinputTel" name="textinput" type="text" placeholder="Telefon" class="form-control input-md">
+                                                                    </div>
+                                                                    <label class="col-md-12 control-label" for="textinput">Lokacija:</label>
+                                                                    <div class="col-md-12">
+                                                                        <input id="textinputGrad" name="textinput" type="text" placeholder="Grad, Drzava, Mesto..." class="form-control input-md">
+                                                                    </div>                              
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="col-md-12 control-label" for="textarea">Opis:</label>
+                                                                    <div class="col-md-12">
+                                                                        <textarea class="form-control" id="textarea" name="textarea"
+                                                                            placeholder="Opis"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="col-md-3 control-label" for="button1id"></label>
+                                                                    <div class="col-md-8">
+                                                                        <button id="button1idP" name="button1id" class="btn btn-success m-2"><i
+                                                                                class="fa fa-check"></i></button>
+                                                                        <button id="button2id" name="button2id" class="btn btn-danger m-2"><i
+                                                                                class="fa fa-times"></i></button>
+                                                                    </div>
+                                                                </div>
+                                                            </fieldset>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                            <div id="load-oglas" class="alert container text-center alert-success" role="alert">
+                                                <div class="spinner-grow" role="status"></div> <span class="h5 ogpos"> Azuriranje oglasa... </span></div>
+                                            <div id="confirm-oglas" class="alert container text-center alert-success" role="alert">
+                                                <i class="fas fa-check"></i> <span class="h5 ogpos1"> Oglas uspesno azuriran! </span></div>
+                                            <div id="nacrtanoId"> </div>
+                                            <!-- Mesto za cartice sa oglasima  -->
+
+                                           
+                                            <!-- ------------>
+                                        </div>
+                                             <div class="card-body text-center" id="ucitajjosOglasa">
+                                        <a href="#" id="refOgl" type= "" class="card-text">Ucitaj jos <i
+                                            class="fas fa-arrow-right"></i></a>
+                                        </div>
+                                        
+                                       
+                                        
+                                    </section>
+                                </div>
+                            </div>
+
+                            <div id="sacuvano-objekti" class="card shadow p-0"style="background: rgba(255,255,255,0.85);">
+                                <div class="card-body">
+                                    <section class="highlight-clean" style="background: rgba(255,255,255,0.85);" >
+                                        <div class="container custom-background" id = "sectionObjekti">
+                                            <div id="nacrtaniObjId"></div>
+                                        </div>
+                                        <div class="card-body text-center" id="ucitajjosObj">
+                                            <a href="#" id="refObj" type= ""class="card-text">Ucitaj jos 
+                                                <i class="fas fa-arrow-right">
+                                                </i>
+                                            </a>
+                                        </div>
+                                    
+                                    </section>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+
+    <footer class="footer-light d-flex justify-content-center p-1">
+        <div class="container">
+            <div class=" d-flex justify-content-center">
+                <div style=""><a href="#"><i> <img src="assets/img/icon3.png"></div>
+            </div>
+            <div class="copyright">Oglasi Se © 2021</div>
+            
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/function_for_pages/fetch_liked.js"></script>
+    <script src="assets/function_for_pages/myprofile-interface.js"></script>
+    <script src="assets/scripts/new-form.js"></script>
+    <script src= "assets/general.js"></script>
+    
+
+</body>
+
+</html>

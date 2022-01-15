@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>homepage</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/Footer-Dark.css">
+    <link rel="stylesheet" href="assets/css/Header-Blue.css">
+    <link rel="stylesheet" href="assets/css/Search-Input-Responsive-with-Icon.css">
+    <link rel="stylesheet" href="assets/css/oglas-styles.css">
+    <link rel="stylesheet" href="assets/css/glyphicons-custom-icons-rating.css">
+    <link rel="stylesheet" href="assets/css/comments.css">
+
+</head>
+<body onload="onIndexLoad()">
+    <nav class="navbar navbar-light navbar-expand-md" id="nav-bar">
+        <div class="container-fluid"><a class="navbar-brand" href="#" style="background: url(&quot;assets/img/Oglasi%20se.png&quot;) center / cover no-repeat;width: 150px;height: 50px;"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav" style="margin-left: auto;">
+                    <li class="nav-item"><a class="nav-link redirekcija text-white" href="profile.html"><i class="fa fa-user"></i> Moj Profil</a></li>
+                    <li class="nav-item" id = "predajOglas"><a class="nav-link active" id="predaj-oglas" href="#"><i class="fa fa-plus-square" id="plus-icon" ></i>Predaj Oglas</a></li>
+                    <li class="nav-item"><a class="nav-link" id="uloguj-se" href = "login.html"><i class="fa fa-user" id="user-icon"></i>Uloguj se</a></li>
+                    <li class="nav-item"></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="content-search">
+        <div style="display: flex;background-color: var(--bs-gray-dark);">
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" type="button" style="background-color: #75c7fb;">Sve kategorije&nbsp;</button>
+                    <div class="dropdown-menu" id="categories">
+                        <div class="dropdown-item">Najnovije</div>
+                        <a class="dropdown-item" >Nekretnine</a>
+                        <a class="dropdown-item" >Vozila i delovi</a>
+                        <a class="dropdown-item" >Posao</a>
+                        <a class="dropdown-item" >Antikviteti i kolekcionarstvo</a>
+                        <a class="dropdown-item" >Audio, TV, foto</a>
+                        <a class="dropdown-item" >Gradjevinarstvo</a>
+                        <a class="dropdown-item" >Knjige</a>
+                        <a class="dropdown-item" >Kucni aparati</a>
+                        <a class="dropdown-item" >Kucni ljubimci</a>
+                        <a class="dropdown-item" >Masine, alati, oprema</a>
+                        <a class="dropdown-item" >Muzika i instrumenti</a>
+                        <a class="dropdown-item" >Namestaj i Pokucstvi</a>
+                        <a class="dropdown-item" >Nega lica i tela</a>
+                        <a class="dropdown-item" >Odeca, obuca, dodaci</a>
+                        <a class="dropdown-item" >Racunari</a>
+                        <a class="dropdown-item" >Sport</a>
+                        <a class="dropdown-item" >Telefoni</a>
+                        <a class="dropdown-item" >Usluge</a>
+                        <a class="dropdown-item" >Zdravstvo</a>
+                        <a class="dropdown-item" >Drugo ...</a>
+                    </div>
+            </div>
+            <input type="search"  id = "search_adds_button" style="border-radius: 5px;" placeholder="Sta trazite?">
+            <button class="btn btn-primary" type="button" style="background-color: #ff1616;" id = "search_adds_button"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+    <div class="container list-wrapper" id="oglasi">
+        <ul id="product-list" class = "Adds-list">                              
+        </ul>
+    </div>
+    <footer class="footer-dark d-flex justify-content-center p-1">
+        <div class="">
+            <div class=" d-flex justify-content-center">
+                <div style=""><a href="#"><i> <img src="assets/img/icon3.png"></div>
+            </div>
+            <div class="copyright">Oglasi Se © 2021</div>
+            
+        </div>
+    </footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/bootstrap1/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootbox.min.js"></script>
+    <script src="assets/function_for_pages/indexjsfile.js"></script>
+    <script src="assets/js/search_latest_adds.js"></script>
+    <script src="assets/general.js"></script>
+    <script src="assets/function_for_pages/recenzija-function.js"></script>
+    
+    <script src="assets/function_for_pages/fetch_liked.js"></script>
+</body>
+</html>
